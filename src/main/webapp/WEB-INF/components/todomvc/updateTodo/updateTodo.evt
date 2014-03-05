@@ -1,0 +1,5 @@
+<aura:event type="APPLICATION">
+  <aura:attribute name="id" type="Long" />
+  <aura:attribute name="value" type="String" />
+  <aura:attribute name="completed" type="Boolean" />
+</aura:event>

@@ -1,0 +1,22 @@
+<aura:component isTemplate="true" extends="aura:template">
+  <aura:set attribute="title" value="Aura • TodoMVC" />
+
+  <aura:set attribute="extraMetaTags">
+    <!-- <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, width=device-width"/> -->
+    <meta name="viewport" content="width=device-width" />
+  </aura:set>
+
+  <aura:set attribute="extraStyleTags">
+    <link rel="stylesheet" href="/bower_components/todomvc-common/base.css" />
+  </aura:set>
+
+  <aura:set attribute="extraScriptTags">
+    <script src="/bower_components/todomvc-common/base.js"></script>
+  </aura:set>
+
+  <aura:set attribute="auraInitBlock">
+    <script>
+      document.addEventListener("touchmove", function (e) { e.preventDefault(); }, false);
+    </script>
+  </aura:set>
+</aura:component>

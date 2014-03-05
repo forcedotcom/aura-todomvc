@@ -1,0 +1,19 @@
+<aura:component>
+  <aura:attribute name="todo" type="Object" />
+  <aura:attribute name="mode" type="String" default="view" />
+  <li aura:id="todo" id="{!'todo_' + v.todo.id}" class="{!(v.mode == 'edit' ? 'editing' : '') + ' ' + (v.todo.completed == true ? 'completed' : '')}">
+    <div class="view">
+      <input id="{!'completed_' + v.todo.id}" type="checkbox" class="toggle" checked="{!v.todo.completed ? 'checked' : ''}" onchange="{!c.complete}" />
+      <aura:if isTrue="{!v.mode == 'view'}">
+        <aura:if isTrue="{!$Browser.isPhone == true}">
+          <label onclick="{!c.edit}">{!v.todo.value}</label>
+          <aura:set attribute="else">
+            <label ondblclick="{!c.edit}">{!v.todo.value}</label>
+          </aura:set>
+        </aura:if>
+        <ui:button class="destroy" label="" theme="" press="{!c.remove}" />
+      </aura:if>
+    </div>
+    <ui:inputText aura:id="new-todo" class="new-todo edit" value="{!v.todo.value}" change="{!c.update}" blur="{!c.update}" placeholder="{!v.placeholder}" />
+  </li>
+</aura:component>

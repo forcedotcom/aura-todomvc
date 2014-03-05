@@ -1,0 +1,79 @@
+.THIS#todoapp h1 {
+  top: -60px; /* Not clear why this is needed... */
+}
+
+.THIS .new-todo {
+  position: relative;
+  margin: 0;
+  width: 100%;
+  font-size: 24px;
+  font-family: inherit;
+  line-height: 1.4em;
+  border: 0;
+  outline: none;
+  color: inherit;
+  padding: 6px;
+  border: 1px solid #999;
+  box-shadow: inset 0 -1px 5px 0 rgba(0, 0, 0, 0.2);
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-font-smoothing: antialiased;
+  -ms-font-smoothing: antialiased;
+  -o-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+}
+
+.THIS .toggle-all {
+  position: absolute;
+  top: -42px;
+  left: -4px;
+  width: 40px;
+  text-align: center;
+  /* Mobile Safari */
+  border: none;
+}
+
+.THIS .toggle-all:before {
+  content: '»';
+  font-size: 28px;
+  color: #d9d9d9;
+  padding: 0 25px 7px;
+}
+
+.THIS .toggle-all:checked:before {
+  color: #737373;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  .THIS .toggle-all {
+    background: none;
+    top: -56px;
+    left: -15px;
+    width: 65px;
+    height: 41px;
+    -webkit-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    transform: rotate(90deg);
+    -webkit-appearance: none;
+    appearance: none;
+  }
+}
+
+.THIS#info p {
+  margin: 12px 0;
+}
+
+.THIS#info {
+  margin: 65px auto 0;
+  color: #a6a6a6;
+  font-size: 12px;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.7);
+  text-align: center;
+}
+
+.THIS#info a {
+  text-decoration: underline;
+}
