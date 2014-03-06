@@ -4,7 +4,7 @@
     <name>Aura Framework Sample</name>
     <modelVersion>4.0.0</modelVersion>
     <groupId>org.auraframework.demo</groupId>
-    <artifactId>todoMVC</artifactId>
+    <artifactId>aura-todomvc</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <packaging>war</packaging>
 
